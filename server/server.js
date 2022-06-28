@@ -8,7 +8,7 @@ app.set("views", './views');
 app.set("view engine","pug");
 app.use(express.static('Public'));
 //MIDDLEWARE
-//app.use(workTime);
+app.use(workTime);
 //HOME
 app.get('/', function (req, res){
     res.render('Home',{title:('home')});
