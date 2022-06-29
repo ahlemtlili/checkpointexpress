@@ -7,6 +7,7 @@ app.set("views", './views');
 
 app.set("view engine","pug");
 app.use(express.static('Public'));
+
 //MIDDLEWARE
 app.use(workTime);
 //HOME
@@ -19,7 +20,7 @@ app.get('/OurServices', function(req, res){
 });
 //CONTACT US
 app.get('/Contactus', function(req, res){
-    res.render('Contactus');
+    res.render('Contactus',{title: ('Contactus')});
 });
 app.use((req, res)=>{
     res.status(404).render("404",{title:'404'})
